@@ -3,11 +3,13 @@
 
 import { House } from "../model/House.js";
 
-/*
-* Should handle loading data
-* Should save data into local storage
+/**
+ * Handles what bruv
+ * Should handle loading data
+ * Should save data into local storage
+ * @param house
+ * @function load_data
 */
-
 class DataHandler {
     // should house be private
     houses = [];
@@ -23,15 +25,16 @@ class DataHandler {
                 const house = new House(price, area, beds, baths, age, acres, taxes);
                 this.houses.push(house)
             }
+
+            this.houses.shift();
+            localStorage.setItem("data", JSON.stringify(this.houses));
         };
-
-        this.houses.shift();
-        console.log(this.houses);
-
-        // FIXME: data not being saved to localStorage
-        localStorage.setItem("data", JSON.stringify(this.houses));
     }
 
+}
+
+const a = () => {
+    console.log(123);
 }
 
 export { DataHandler }

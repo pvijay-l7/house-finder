@@ -1,0 +1,48 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: max-content;
+    padding: 20px;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 30%;
+}
+
+.input-file::target-text {
+    display: none;
+}
+
+.input-file::-webkit-file-upload-button {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#continue {
+    border: 1px solid black;
+    width: 30%;
+    height: 20%;
+    color: black;
+}
+
+#continue:hover {
+    cursor: pointer;
+    box-shadow: 5px 7px 0 0px black;
+}
+
+#continue:disabled {
+    opacity: 0.5;
+}
