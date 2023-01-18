@@ -1,22 +1,32 @@
 "use strict";
 // ! MODAL
 
+import { House } from "./model/House.js";
+
 /*
 * Should handle loading data
 * Should save data into local storage
 */
 
 class DataHandler {
-    constructor() {
-        this.file;
-    }
+    // should house be private
+    houses = [];
 
-    set_file(file) {
-        this.file = file;
-    }
+    load_data(file) {
+        const file_reader = new FileReader();
+        file_reader.readAsText(file, "UTF-8");
 
-    print_data() {
-        console.log(this.file);
+        file_reader.onload = process => {
+            const loaded_data = process.target.result.trim().replace("\r", "").split("\n");
+            for (const data of loaded_data) {
+                const [price, area, beds, baths, age, acres, taxes] = data.trim().replace("\r", "").split(",");
+                const house = new House(price, area, beds, baths, age, acres, taxes);
+                this.houses.push(house)
+            }
+        };
+
+        this.houses.shift();
+        localStorage.setItem("data", JSON.stringify(this.houses));
     }
 }
 
