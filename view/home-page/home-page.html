@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script defer src="./home-page-handler.js"></script>
+    <script type="module" defer src="./home-page-handler.js"></script>
 
     <link rel="stylesheet" href="../stylesheets/home-page-style.css">
 
@@ -14,8 +14,31 @@
 </head>
 
 <body>
-    <h1>HouseFinder</h1>
-
+    <h1><u>HouseFinder</u></h1>
+    <div class="filter-options">
+        <p>price</p>
+        <p>area</p>
+        <p>beds</p>
+        <p>baths</p>
+        <p>age</p>
+        <p>property area</p>
+    </div>
+    <button>search</button>
+    <div class="content">
+        <div class="sub-content">
+            <div class="image">
+                <div class="age-display">
+                    <p class="age">10yr</p>
+                    <!-- as a round thing -->
+                </div>
+            </div>
+            <p>Price:</p>
+            <p>Area:</p>
+            <p>Property area:</p>
+            <p>Beds:</p>
+            <p>Baths:</p>
+        </div>
+    </div>
 </body>
 
 </html>

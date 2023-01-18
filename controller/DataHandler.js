@@ -1,12 +1,12 @@
 "use strict";
-// ! MODAL
-
+import { local_storage_key } from "../global.js";
 import { House } from "../model/House.js";
 
 /**
  * Handles what bruv
  * Should handle loading data
  * Should save data into local storage
+ * Should retrieve data 
  * @param house
  * @function load_data
 */
@@ -31,10 +31,11 @@ class DataHandler {
         };
     }
 
-}
+    get_loaded_data() {
+        const house_data = JSON.parse(localStorage.getItem(local_storage_key) || '[]');
+        return house_data;
+    }
 
-const a = () => {
-    console.log(123);
 }
 
 export { DataHandler }

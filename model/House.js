@@ -7,12 +7,12 @@ class House {
 
     constructor(price, area, beds, baths, age, acres, taxes) {
         this.price = Number(price);
-        this.area = area;
-        this.beds = beds;
-        this.baths = baths;
-        this.age = age;
-        this.acres = acres;
-        this.taxes = taxes;
+        this.area = Number(area);
+        this.beds = Number(beds);
+        this.baths = Number(baths);
+        this.age = Number(age);
+        this.acres = Number(acres);
+        this.taxes = Number(taxes);
     }
 
     get_actual_price() {

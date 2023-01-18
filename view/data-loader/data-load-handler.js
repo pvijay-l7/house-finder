@@ -1,8 +1,6 @@
 "use strict";
 
-// NEED TO CHECK TYPE OF INPUT FILE
-
-import { DataHandler } from "../../controller/DataHandler.js";
+import { data_handler } from "../../global.js";
 
 
 const input = document.querySelector("input");
@@ -26,7 +24,7 @@ input.addEventListener("change", event => {
     console.log(file);
 
     if (file_type.includes("csv") || file_type.includes("txt")) {
-        const data_handler = new DataHandler();
+        // const data_handler = new DataHandler();
         data_handler.load_data(file);
         continue_button.disabled = false;
         descriptor.innerHTML = `File size: ${file_size}kb`
