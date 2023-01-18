@@ -1,12 +1,14 @@
 "use strict";
 
+import { DataHandler } from "./DataHandler.js";
+
 // TODO:
+// FIXME: Read only csv or txt
 // ! 1. Read data
 // * 2. Process data into -> type string 
 // *    1. Parse the data into house objects
 // *    2. Store in a list of house objects
 // *    3. Store in local storage
-
 
 class House {
     price_in = 10000;
