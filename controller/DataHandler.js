@@ -1,7 +1,7 @@
 "use strict";
 // ! MODAL
 
-import { House } from "./model/House.js";
+import { House } from "../model/House.js";
 
 /*
 * Should handle loading data
@@ -26,8 +26,12 @@ class DataHandler {
         };
 
         this.houses.shift();
+        console.log(this.houses);
+
+        // FIXME: data not being saved to localStorage
         localStorage.setItem("data", JSON.stringify(this.houses));
     }
+
 }
 
 export { DataHandler }
