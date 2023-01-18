@@ -48,22 +48,37 @@ button:hover {
     align-self: flex-start;
 }
 
+.sub-content:hover {
+    border: 1px dashed black;
+}
+
 .sub-content .image {
-    width: 200px;
-    height: 200px;
-    background-image: linear-gradient(to bottom right, purple, red);
+    width: 250px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+}
+
+.backdrop-1 {
+    background-image: linear-gradient(to bottom right, purple, red);
+}
+
+.backdrop-2 {
+    background-image: linear-gradient(to top right, #0f2027, white);
+}
+
+.backdrop-3 {
+    background-image: linear-gradient(to bottom right, #ff4b1f, #c0f6ff);
 }
 
 .sub-content .image .age-display {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20%;
-    height: 20%;
-    border-radius: 20px;
+    width: 22%;
+    height: 22%;
+    border-radius: 25px;
     background-color: rgba(0, 0, 0, 0.2);
     font-size: smaller;
 }

@@ -6,8 +6,8 @@ class House {
     area_unit = "sq.ft";
 
     constructor(price, area, beds, baths, age, acres, taxes) {
-        this.price = Number(price);
-        this.area = Number(area);
+        this.price = Number(price) * this.price_in;
+        this.area = Number(area) * this.area_in;
         this.beds = Number(beds);
         this.baths = Number(baths);
         this.age = Number(age);
