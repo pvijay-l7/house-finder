@@ -21,8 +21,6 @@ input.addEventListener("change", event => {
     const file_type = file.type;
     const file_size = file.size / 1000;
 
-    console.log(file);
-
     if (file_type.includes("csv") || file_type.includes("txt")) {
         // const data_handler = new DataHandler();
         data_handler.load_data(file);

@@ -13,7 +13,7 @@ const search_button = document.querySelector("#search");
 // * 5. Validate filter conditions
 // * 6. Check if the filter is unchanged for each click
 
-// ! TEMP - change to get filter
+// ! TEMP - change to get filterz
 const filter = {
     "min_price": 1_500_000,
     "max_price": 3_000_000,
@@ -67,10 +67,8 @@ const generate_sub_content = (house) => {
 
 search_button.addEventListener("click", () => {
     content.innerText = "";
-    console.log(filter);
 
     house_finder.filter_house_data(filter).then(houses => {
-        console.log(houses);
         const houses_found = houses.length;
         if (houses_found === 0) {
             content.innerHTML = "Oops we couldn't find anything that matched your preferences.";
@@ -86,8 +84,6 @@ search_button.addEventListener("click", () => {
 
 window.addEventListener("load", (e) => {
     // !MOVE THIS TO CONTROLLER BRO
-
-    console.log(JSON.parse(localStorage.getItem("data")));
 
     const houses = data_handler.get_loaded_data();
 
