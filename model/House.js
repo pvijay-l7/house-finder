@@ -1,7 +1,7 @@
 "use strict";
 class House {
     price_in = 10000;
-    price_unit = "inr";
+    price_unit = "usd";
     area_in = 100;
     area_unit = "sq.ft";
 

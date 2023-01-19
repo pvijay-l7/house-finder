@@ -4,6 +4,8 @@ import { data_handler, house_finder } from "../../global.js"
 
 const content = document.querySelector(".content");
 const search_button = document.querySelector("#search");
+const reset_button = document.querySelector("#reset");
+const descriptor = document.querySelector("#descriptor");
 
 // TODO:
 // * 1. On load get the data from the corresponding handler
@@ -16,7 +18,7 @@ const search_button = document.querySelector("#search");
 // ! TEMP - change to get filterz
 const filter = {
     "min_price": 1_500_000,
-    "max_price": 3_000_000,
+    "max_price": 2_500_000,
     "min_area": 1500,
     "max_area": 3000,
     "min_beds": 0,
@@ -57,7 +59,7 @@ const generate_sub_content = (house) => {
                 </div>
             </div>
             <p>Price:${currency_unit}${parse_price(house.price)}</p>
-            <p>Area:${house.area}sq.ft</p>
+            <p>Area:${house.area}${house.area_unit}</p>
             <p>Property area:${house.acres}</p>
             <p>Beds:${house.beds}</p>
             <p>Baths:${house.baths}</p>
@@ -67,19 +69,33 @@ const generate_sub_content = (house) => {
 
 search_button.addEventListener("click", () => {
     content.innerText = "";
+    descriptor.innerHTML = "";
 
     house_finder.filter_house_data(filter).then(houses => {
         const houses_found = houses.length;
         if (houses_found === 0) {
             content.innerHTML = "Oops we couldn't find anything that matched your preferences.";
         } else {
-            content.insertAdjacentText("beforebegin", `We found ${houses_found} properties that match your preference`)
+            descriptor.innerHTML = `We found ${houses_found} properties that match your preference`;
             for (const house of houses) {
                 content.insertAdjacentHTML("afterbegin", generate_sub_content(house));
             }
         }
 
     });
+})
+
+reset_button.addEventListener("click", () => {
+    const houses = data_handler.get_loaded_data();
+    // const houses_found = houses.length;
+
+    content.innerText = "";
+    descriptor.innerHTML = ``;
+
+
+    for (const house of houses) {
+        content.insertAdjacentHTML("afterbegin", generate_sub_content(house))
+    }
 })
 
 window.addEventListener("load", (e) => {

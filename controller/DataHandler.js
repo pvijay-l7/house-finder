@@ -36,6 +36,8 @@ class DataHandler {
         return house_data;
     }
 
+    // ! FIND A WAY TO GET MAX AND MIN OF ALL THE FIELDS
+
 }
 
 export { DataHandler }
