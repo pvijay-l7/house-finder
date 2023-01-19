@@ -21,9 +21,9 @@ const filter = {
     "max_price": 2_500_000,
     "min_area": 1500,
     "max_area": 3000,
-    "min_beds": 0,
-    "max_beds": 4,
-    "min_baths": 0,
+    "min_beds": 1,
+    "max_beds": 3,
+    "min_baths": 1,
     "max_baths": 3,
     "min_age": 0,
     "max_age": 1000,
@@ -76,7 +76,7 @@ search_button.addEventListener("click", () => {
         if (houses_found === 0) {
             content.innerHTML = "Oops we couldn't find anything that matched your preferences.";
         } else {
-            descriptor.innerHTML = `We found ${houses_found} properties that match your preference`;
+            descriptor.innerHTML = `We found ${houses_found} ${houses_found === 1 ? "property" : "properties"} that match your preference`;
             for (const house of houses) {
                 content.insertAdjacentHTML("afterbegin", generate_sub_content(house));
             }
