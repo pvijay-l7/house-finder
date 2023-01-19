@@ -37,7 +37,6 @@ button:hover {
 .content {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -45,7 +44,6 @@ button:hover {
     border: 1px solid black;
     width: fit-content;
     text-align: left;
-    align-self: flex-start;
 }
 
 .sub-content:hover {
@@ -76,9 +74,9 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 22%;
-    height: 22%;
-    border-radius: 25px;
-    background-color: rgba(0, 0, 0, 0.2);
+    width: 20%;
+    height: 20%;
+    border: 1px dotted black;
+    background-color: rgba(255, 255, 255, 0.2);
     font-size: smaller;
 }

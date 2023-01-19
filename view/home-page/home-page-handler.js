@@ -15,7 +15,7 @@ const search_button = document.querySelector("#search");
 
 // ! TEMP - change to get filter
 const filter = {
-    "min_price": 2_000_000,
+    "min_price": 1_500_000,
     "max_price": 3_000_000,
     "min_area": 1500,
     "max_area": 3000,
@@ -86,6 +86,8 @@ search_button.addEventListener("click", () => {
 
 window.addEventListener("load", (e) => {
     // !MOVE THIS TO CONTROLLER BRO
+
+    console.log(JSON.parse(localStorage.getItem("data")));
 
     const houses = data_handler.get_loaded_data();
 
