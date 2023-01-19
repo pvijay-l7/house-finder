@@ -9,6 +9,7 @@
     <script type="module" defer src="./home-page-handler.js"></script>
 
     <link rel="stylesheet" href="../stylesheets/home-page-style.css">
+    <link rel="stylesheet" href="./slider.css">
 
     <title>House Finder</title>
 </head>
@@ -17,17 +18,29 @@
     <!-- add filter options -->
     <h1><u>HouseFinder</u></h1>
     <div class="filter-options">
-        <p>price</p>
-        <p>area</p>
-        <p>beds</p>
-        <p>baths</p>
-        <p>age</p>
-        <p>property area</p>
+        <p type="price">price</p>
+        <p type="area">area</p>
+        <p type="beds">beds</p>
+        <p type="baths">baths</p>
+        <p type="age">age</p>
+        <p type="property_area">property area</p>
     </div>
     <button id="search">search</button>
     <button id="reset">reset filter</button>
     <p id="descriptor"></p>
     <div class="content">
+    </div>
+    <div class="wrapper">
+        <div class="values">
+            <span id="range1">
+            </span>
+            <span id="range2"></span>
+        </div>
+        <div class="container">
+            <div class="slider-track"></div>
+            <input step="0" type="range" min="0" max="100" value="0" id="slider-1">
+            <input step="0" type="range" min="0" max="100" value="100" id="slider-2">
+        </div>
     </div>
 </body>
 

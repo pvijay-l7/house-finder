@@ -1,6 +1,7 @@
 "use strict";
 
 import { data_handler, house_finder } from "../../global.js"
+import { activate } from "./slider.js";
 
 const content = document.querySelector(".content");
 const search_button = document.querySelector("#search");
@@ -106,4 +107,5 @@ window.addEventListener("load", (e) => {
     for (const house of houses) {
         content.insertAdjacentHTML("afterbegin", generate_sub_content(house))
     }
+    activate();
 })
