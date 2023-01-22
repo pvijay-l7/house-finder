@@ -21,27 +21,27 @@ class HouseFinder {
         // if all 6 conditions are met then return true else false
         // if house matches filter return true else false
 
-        if (house.price <= filter.max_price && house.price >= filter.min_price) {
+        if (house.price <= filter.price.max && house.price >= filter.price.min) {
             is_match++;
         }
 
-        if (house.area <= filter.max_area && house.area >= filter.min_area) {
+        if (house.area <= filter.area.max && house.area >= filter.area.min) {
             is_match++;
         }
 
-        if (house.beds <= filter.max_beds && house.beds >= filter.min_beds) {
+        if (house.beds <= filter.beds.max && house.beds >= filter.beds.min) {
             is_match++;
         }
 
-        if (house.baths <= filter.max_baths && house.baths >= filter.min_baths) {
+        if (house.baths <= filter.baths.max && house.baths >= filter.baths.min) {
             is_match++;
         }
 
-        if (house.age <= filter.max_age && house.age >= filter.min_age) {
+        if (house.age <= filter.age.max && house.age >= filter.age.min) {
             is_match++;
         }
 
-        if (house.acres <= filter.max_acres && house.acres >= filter.min_acres) {
+        if (house.acres <= filter.acres.max && house.acres >= filter.acres.min) {
             is_match++;
         }
 

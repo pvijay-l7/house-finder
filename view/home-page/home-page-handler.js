@@ -18,18 +18,30 @@ const descriptor = document.querySelector("#descriptor");
 
 // ! TEMP - change to get filterz
 const filter = {
-    "min_price": 1_500_000,
-    "max_price": 2_500_000,
-    "min_area": 1500,
-    "max_area": 3000,
-    "min_beds": 1,
-    "max_beds": 3,
-    "min_baths": 1,
-    "max_baths": 3,
-    "min_age": 0,
-    "max_age": 1000,
-    "min_acres": 0,
-    "max_acres": 1000,
+    price: {
+        min: 1_500_000,
+        max: 5_000_000,
+    },
+    area: {
+        min: 1000,
+        max: 6000,
+    },
+    beds: {
+        min: 1,
+        max: 10,
+    },
+    baths: {
+        min: 1,
+        max: 10,
+    },
+    age: {
+        min: 0,
+        max: 1000,
+    },
+    acres: {
+        min: 0,
+        max: 20,
+    }
 }
 
 const get_random_backdrop = () => {
@@ -109,3 +121,5 @@ window.addEventListener("load", (e) => {
     }
     activate();
 })
+
+export { filter }
