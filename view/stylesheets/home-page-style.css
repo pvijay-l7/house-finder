@@ -50,6 +50,10 @@ button:hover {
     border: 1px dashed black;
 }
 
+span {
+    display: block;
+}
+
 .sub-content .image {
     width: 250px;
     height: 250px;

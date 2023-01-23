@@ -19,7 +19,7 @@ const descriptor = document.querySelector("#descriptor");
 // ! TEMP - change to get filterz
 const filter = {
     price: {
-        min: 1_500_000,
+        min: 500_000,
         max: 5_000_000,
     },
     area: {
